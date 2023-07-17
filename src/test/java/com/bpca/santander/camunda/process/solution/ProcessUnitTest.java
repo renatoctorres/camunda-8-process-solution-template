@@ -1,4 +1,4 @@
-package org.example.camunda.process.solution;
+package com.bpca.santander.camunda.process.solution;
 
 import static io.camunda.zeebe.process.test.assertions.BpmnAssert.assertThat;
 import static io.camunda.zeebe.spring.test.ZeebeTestThreadSupport.waitForProcessInstanceCompleted;
@@ -6,13 +6,14 @@ import static io.camunda.zeebe.spring.test.ZeebeTestThreadSupport.waitForProcess
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
+import com.bpca.santander.camunda.process.solution.facade.ProcessController;
+import com.bpca.santander.camunda.process.solution.service.MyService;
 import io.camunda.zeebe.process.test.api.ZeebeTestEngine;
 import io.camunda.zeebe.process.test.inspections.InspectionUtility;
 import io.camunda.zeebe.process.test.inspections.model.InspectedProcessInstance;
 import io.camunda.zeebe.spring.test.ZeebeSpringTest;
 import java.time.Duration;
-import org.example.camunda.process.solution.facade.ProcessController;
-import org.example.camunda.process.solution.service.MyService;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -13,6 +13,7 @@ services:
 
   zeebe: # https://docs.camunda.io/docs/self-managed/platform-deployment/docker/#zeebe
     image: camunda/zeebe:${CAMUNDA_PLATFORM_VERSION:-8.1.8}
+#    image: camunda/zeebe:latest
     container_name: zeebe
     ports:
       - "26500:26500"
@@ -153,7 +154,7 @@ services:
       KEYCLOAK_INIT_TASKLIST_ROOT_URL: http://localhost:8082
       KEYCLOAK_INIT_OPTIMIZE_SECRET: XALaRPl5qwTEItdwCMiPS62nVpKs7dL7
       KEYCLOAK_INIT_OPTIMIZE_ROOT_URL: http://localhost:8083
-      KEYCLOAK_INIT_WEBMODELER_ROOT_URL: http://localhost:8070   
+      KEYCLOAK_INIT_WEBMODELER_ROOT_URL: http://localhost:8070
       KEYCLOAK_USERS_0_USERNAME: "demo"
       KEYCLOAK_USERS_0_PASSWORD: "demo"
       KEYCLOAK_USERS_0_FIRST_NAME: "demo"

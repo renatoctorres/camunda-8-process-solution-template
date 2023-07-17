@@ -1,4 +1,4 @@
-package org.example.camunda.process.solution;
+package com.bpca.santander.camunda.process.solution;
 
 import io.camunda.zeebe.spring.client.EnableZeebeClient;
 import io.camunda.zeebe.spring.client.annotation.Deployment;

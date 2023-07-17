@@ -2,7 +2,7 @@
 ![Compatible with: Camunda Platform 8](https://img.shields.io/badge/Compatible%20with-Camunda%20Platform%208-0072Ce)
 [![](https://img.shields.io/badge/Lifecycle-Incubating-blue)](https://github.com/Camunda-Community-Hub/community/blob/main/extension-lifecycle.md#incubating-)
 
-# Process Solution Template for Camunda Platform 8 using Java and Spring Boot
+# Process Solution [.optimize](.optimize)Template for Camunda Platform 8 using Java and Spring Boot
 
 This repository contains a Java application template for Camunda Platform 8 using Spring Boot
 and a [docker-compose.yaml](docker-compose.yaml) file for local development. For production setups we recommend to use our [helm charts](https://docs.camunda.io/docs/self-managed/platform-deployment/kubernetes-helm/).
@@ -22,7 +22,7 @@ and rename/refactor the following artifacts:
 
 * `groupId`, `artifactId`, `name`, and `description` in [pom.xml](pom.xml)
 * `process/@id` and `process/@name` in [src/main/resources/models/camunda-process.bpmn](src/main/resources/models/camunda-process.bpmn)
-* `ProcessConstansts#BPMN_PROCESS_ID` in [src/main/java/org/example/camunda/process/solution/ProcessConstants.java](src/main/java/org/example/camunda/process/solution/ProcessConstants.java)
+* `ProcessConstansts#BPMN_PROCESS_ID` in [src/main/java/org/example/camunda/process/solution/ProcessConstants.java](src/main/java/com/bpca/santander/camunda/process/solution/ProcessConstants.java)
 * Java package name, e.g. `org.example.camunda.process.solution.*`
 
 By forking this project, you can stay connected to improvements that we do to this template and simply pull updates into your fork, e.g. by using GitHub's Web UI or the following commands:
@@ -182,7 +182,7 @@ Once you are ready to deploy or execute processes use these settings to deploy t
 * URL: `zeebe:26500`
 
 ### Emails
-The setup includes [MailHog](https://github.com/mailhog/MailHog) as a test SMTP server. It captures all emails sent by Web Modeler, but does not forward them to the actual recipients. 
+The setup includes [MailHog](https://github.com/mailhog/MailHog) as a test SMTP server. It captures all emails sent by Web Modeler, but does not forward them to the actual recipients.
 
 You can access emails in MailHog's Web UI at [http://localhost:8075](http://localhost:8075).
 

@@ -1,42 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_13krl2g" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.1.0-nightly.20220424" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.0.0">
-  <bpmn:process id="camunda-process" name="Camunda Process" isExecutable="true">
-    <bpmn:startEvent id="StartEvent_1">
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="yes"?>
+<definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:tns="http://bpmn.io/schema/bpmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" exporter="Camunda Modeler" exporterVersion="5.1.0-nightly.20220424" expressionLanguage="http://www.w3.org/1999/XPath" id="Definitions_13krl2g" name="" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <bpmn:process id="camunda-process" isClosed="false" isExecutable="true" name="Camunda Process" processType="None">
+    <bpmn:extensionElements>
+      <yaoqiang:description/>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724"/>
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1"/>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1" isInterrupting="true" parallelMultiple="false">
       <bpmn:outgoing>Flow_0h8v107</bpmn:outgoing>
+      <bpmn:outputSet/>
     </bpmn:startEvent>
-    <bpmn:sequenceFlow id="Flow_0h8v107" sourceRef="StartEvent_1" targetRef="Task_InvokeService" />
+    <bpmn:sequenceFlow id="Flow_0h8v107" sourceRef="StartEvent_1" targetRef="Task_InvokeService"/>
     <bpmn:endEvent id="Event_1spy7qp">
       <bpmn:incoming>Flow_1uw23im</bpmn:incoming>
+      <bpmn:inputSet/>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_1uw23im" sourceRef="Task_InvokeService" targetRef="Event_1spy7qp" />
-    <bpmn:serviceTask id="Task_InvokeService" name="Invoke service">
+    <bpmn:sequenceFlow id="Flow_1uw23im" sourceRef="Task_InvokeService" targetRef="Event_1spy7qp"/>
+    <bpmn:serviceTask completionQuantity="1" id="Task_InvokeService" implementation="##WebService" isForCompensation="false" name="Invoke service" startQuantity="1">
       <bpmn:extensionElements>
-        <zeebe:taskDefinition type="invokeMyService" />
+        <zeebe:taskDefinition type="invokeMyService"/>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_0h8v107</bpmn:incoming>
       <bpmn:outgoing>Flow_1uw23im</bpmn:outgoing>
     </bpmn:serviceTask>
   </bpmn:process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="camunda-process">
-      <bpmndi:BPMNEdge id="Flow_1uw23im_di" bpmnElement="Flow_1uw23im">
-        <di:waypoint x="370" y="117" />
-        <di:waypoint x="432" y="117" />
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-camunda-process" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="camunda-process">
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="Yaoqiang-StartEvent_1">
+        <dc:Bounds height="32.0" width="32.0" x="179.0" y="99.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="20.63" width="6.0" x="192.0" y="138.68"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Event_1spy7qp" id="Yaoqiang-Event_1spy7qp">
+        <dc:Bounds height="32.0" width="32.0" x="432.0" y="99.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="20.63" width="6.0" x="445.0" y="138.68"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_InvokeService" id="Yaoqiang-Task_InvokeService">
+        <dc:Bounds height="80.0" width="100.0" x="270.0" y="77.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="20.63" width="76.0" x="282.0" y="108.68"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="Flow_1uw23im" id="Yaoqiang-Flow_1uw23im">
+        <di:waypoint x="370.0" y="117.0"/>
+        <di:waypoint x="432.0" y="115.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="20.63" width="6.0" x="398.0" y="105.68"/>
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0h8v107_di" bpmnElement="Flow_0h8v107">
-        <di:waypoint x="215" y="117" />
-        <di:waypoint x="270" y="117" />
+      <bpmndi:BPMNEdge bpmnElement="Flow_0h8v107" id="Yaoqiang-Flow_0h8v107">
+        <di:waypoint x="211.0" y="115.0"/>
+        <di:waypoint x="270.0" y="117.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="20.63" width="6.0" x="237.5" y="105.68"/>
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
-        <dc:Bounds x="179" y="99" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1spy7qp_di" bpmnElement="Event_1spy7qp">
-        <dc:Bounds x="432" y="99" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0h8510g_di" bpmnElement="Task_InvokeService">
-        <dc:Bounds x="270" y="77" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-</bpmn:definitions>
+</definitions>

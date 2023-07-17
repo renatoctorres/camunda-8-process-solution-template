@@ -1,4 +1,4 @@
-package org.example.camunda.process.solution;
+package com.bpca.santander.camunda.process.solution;
 
 public class ProcessConstants {
 
